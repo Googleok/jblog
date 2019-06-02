@@ -1,0 +1,7 @@
+/Auth$Role.class
+/Auth.class
+/AuthInterceptor.class
+/AuthLoginInterceptor.class
+/AuthLogoutInterceptor.class
+/AuthUser.class
+/AuthUserHandlerMethodArgumentResolver.class
