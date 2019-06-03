@@ -17,6 +17,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 		// 1. handler 종류 확인
 		// 종류의 두가지  HandlerMethod, DefaultServletHandler
 		// handlermethod가 아닌 assets 나 image 파일들이 interceptor에 걸리지 않게 설정해주는 것
+		System.out.println("안녕");
 		if(handler instanceof HandlerMethod == false) {
 			System.out.println(handler);
 			return true;
