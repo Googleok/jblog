@@ -85,6 +85,5 @@
 	<modules>
 		<module>jblog2-1</module>
 		<module>jblog3</module>
-		<module>jblog4</module>
 	</modules>
 </project>
