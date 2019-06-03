@@ -7,9 +7,8 @@
 		<artifactId>jblog</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>jblog2-1</artifactId>
+	<artifactId>jblog3</artifactId>
 	<packaging>war</packaging>
-
 
 	<dependencies>
 		<!-- mariadb java client -->
@@ -72,53 +71,13 @@
 			<version>1.4</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.module/jackson-module-parameter-names -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.module</groupId>
+			<artifactId>jackson-module-parameter-names</artifactId>
+			<version>2.9.9</version>
+		</dependency>
 	</dependencies>
-
-	<profiles>
-		<profile>
-			<id>production</id>
-			<build>
-				<resources>
-					<resource>
-						<directory>${project.basedir}/src/main/resources</directory>
-						<excludes>
-							<exclude>**/*.java</exclude>
-						</excludes>
-					</resource>
-					<resource>
-						<directory>${project.basedir}/src/main/production/resources</directory>
-						<excludes>
-							<exclude>**/*.java</exclude>
-						</excludes>
-					</resource>
-				</resources>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-resources-plugin</artifactId>
-						<configuration>
-							<encoding>UTF-8</encoding>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-			<dependencies>
-				<!-- Servlet -->
-				<dependency>
-					<groupId>javax.servlet</groupId>
-					<artifactId>javax.servlet-api</artifactId>
-					<version>3.0.1</version>
-					<scope>provided</scope>
-				</dependency>
-				<dependency>
-					<groupId>javax.servlet.jsp</groupId>
-					<artifactId>jsp-api</artifactId>
-					<version>2.0</version>
-					<scope>provided</scope>
-				</dependency>
-			</dependencies>
-		</profile>
-	</profiles>
 
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
@@ -128,7 +87,7 @@
 				<artifactId>tomcat-maven-plugin</artifactId>
 				<configuration>
 					<url>http://127.0.0.1:8080/manager/text</url>
-					<path>/jblog2</path>
+					<path>/jblog3</path>
 					<username>admin</username>
 					<password>manager</password>
 				</configuration>
@@ -153,4 +112,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
